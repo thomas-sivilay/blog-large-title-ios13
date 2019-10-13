@@ -16,9 +16,15 @@ class FirstViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
         
         titleDisplayModeLabel.text = "titleDisplayMode = \(navigationItem.largeTitleDisplayMode.stringValue)"
         prefersLargeTitlesLabel.text = "prefersLargeTitlesLabel = \(navigationController!.navigationBar.prefersLargeTitles)"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

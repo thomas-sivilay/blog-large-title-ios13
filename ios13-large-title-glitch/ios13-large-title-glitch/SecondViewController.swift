@@ -16,8 +16,9 @@ class SecondViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.prefersLargeTitles = false
-        
+
         titleDisplayModeLabel.text = "titleDisplayMode = \(navigationItem.largeTitleDisplayMode.stringValue)"
         prefersLargeTitlesLabel.text = "prefersLargeTitlesLabel = \(navigationController!.navigationBar.prefersLargeTitles)"
     }
