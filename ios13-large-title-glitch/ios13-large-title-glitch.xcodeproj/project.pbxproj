@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91B2A0523531D10009BE732 /* LargeTitleDisplayMode+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B2A0423531D10009BE732 /* LargeTitleDisplayMode+String.swift */; };
 		E96CC5932352E24500924C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CC5922352E24500924C67 /* AppDelegate.swift */; };
 		E96CC5952352E24500924C67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CC5942352E24500924C67 /* SceneDelegate.swift */; };
 		E96CC5972352E24500924C67 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96CC5962352E24500924C67 /* FirstViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91B2A0423531D10009BE732 /* LargeTitleDisplayMode+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LargeTitleDisplayMode+String.swift"; sourceTree = "<group>"; };
 		E96CC58F2352E24500924C67 /* ios13-large-title-glitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios13-large-title-glitch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96CC5922352E24500924C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E96CC5942352E24500924C67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E96CC59B2352E24500924C67 /* Assets.xcassets */,
 				E96CC59D2352E24500924C67 /* LaunchScreen.storyboard */,
 				E96CC5A02352E24500924C67 /* Info.plist */,
+				E91B2A0423531D10009BE732 /* LargeTitleDisplayMode+String.swift */,
 			);
 			path = "ios13-large-title-glitch";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91B2A0523531D10009BE732 /* LargeTitleDisplayMode+String.swift in Sources */,
 				E96CC5A72352E27E00924C67 /* SecondViewController.swift in Sources */,
 				E96CC5972352E24500924C67 /* FirstViewController.swift in Sources */,
 				E96CC5932352E24500924C67 /* AppDelegate.swift in Sources */,

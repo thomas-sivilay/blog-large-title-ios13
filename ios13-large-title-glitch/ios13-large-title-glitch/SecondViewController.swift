@@ -10,10 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var titleDisplayModeLabel: UILabel!
+    @IBOutlet weak var prefersLargeTitlesLabel: UILabel!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationItem.largeTitleDisplayMode = .never
+        
         navigationController?.navigationBar.prefersLargeTitles = false
+        
+        titleDisplayModeLabel.text = "titleDisplayMode = \(navigationController!.navigationItem.largeTitleDisplayMode.stringValue)"
+        prefersLargeTitlesLabel.text = "prefersLargeTitlesLabel = \(navigationController!.navigationBar.prefersLargeTitles)"
     }
-
 }
