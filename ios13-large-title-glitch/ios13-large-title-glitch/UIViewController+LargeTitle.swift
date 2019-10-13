@@ -16,11 +16,27 @@ extension UIViewController {
             guard let navigationController = navigationController else { break }
             setLargeTitleDisplayMode(navigationController.navigationBar.prefersLargeTitles ? .always : .never)
         case .always, .never:
-            navigationItem.largeTitleDisplayMode = largeTitleDisplayMode
+            // Always override to be .never if large title isn't available (contentSizeCategory, device size..)
+            navigationItem.largeTitleDisplayMode = isLargeTitleAvailable() ? largeTitleDisplayMode : .never
             // Even when .never, needs to be true otherwise animation will be broken on iOS11, 12, 13
             navigationController?.navigationBar.prefersLargeTitles = true
         @unknown default:
             assertionFailure("\(#function): Missing handler for \(largeTitleDisplayMode)")
+        }
+    }
+    
+    private func isLargeTitleAvailable() -> Bool {
+        switch traitCollection.preferredContentSizeCategory {
+        case .accessibilityExtraExtraExtraLarge,
+             .accessibilityExtraExtraLarge,
+             .accessibilityExtraLarge,
+             .accessibilityLarge,
+             .accessibilityMedium,
+             .extraExtraExtraLarge:
+            return false
+        default:
+            /// Exclude 4" screen or 4.7" with zoomed
+            return UIScreen.main.bounds.height > 568
         }
     }
 }
