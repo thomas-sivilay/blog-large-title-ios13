@@ -18,7 +18,7 @@ class FirstViewController: UIViewController {
 
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        titleDisplayModeLabel.text = "titleDisplayMode = \(navigationController!.navigationItem.largeTitleDisplayMode.stringValue)"
+        titleDisplayModeLabel.text = "titleDisplayMode = \(navigationItem.largeTitleDisplayMode.stringValue)"
         prefersLargeTitlesLabel.text = "prefersLargeTitlesLabel = \(navigationController!.navigationBar.prefersLargeTitles)"
     }
 }
