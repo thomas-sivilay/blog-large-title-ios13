@@ -1,5 +1,6 @@
 # blog-large-title-ios13
 Fix iOS13 large title animation glitch
+https://www.morningswiftui.com/blog/fix-large-title-animation-on-ios13
 
 ## Issue on iOS13
 ![Gif of the issue on iOS13](https://github.com/thomas-sivilay/blog-large-title-ios13/blob/master/issue_ios13.gif)
