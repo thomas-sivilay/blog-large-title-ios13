@@ -14,7 +14,11 @@ extension UIViewController {
         switch largeTitleDisplayMode {
         case .automatic:
             guard let navigationController = navigationController else { break }
-            setLargeTitleDisplayMode(navigationController.navigationBar.prefersLargeTitles ? .always : .never)
+            if let index = navigationController.children.firstIndex(of: self) {
+                setLargeTitleDisplayMode(index == 0 ? .always : .never)
+            } else {
+                setLargeTitleDisplayMode(.always)
+            }
         case .always, .never:
             // Always override to be .never if large title isn't available (contentSizeCategory, device size..)
             navigationItem.largeTitleDisplayMode = isLargeTitleAvailable() ? largeTitleDisplayMode : .never
